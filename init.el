@@ -10,6 +10,7 @@
        ophints
        (popup +defaults)
        window-select
+       ligatures
 
        :editor
        evil
