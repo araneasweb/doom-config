@@ -11,15 +11,21 @@
        (popup +defaults)
        window-select
        ligatures
+       (vc-gutter +pretty)
+       hl-todo
 
        :editor
-       evil
+       (evil +everywhere)
        fold
-      (format +onsave)
+       (format +onsave)
+       snippets
 
        :emacs
        undo
        dired
+       electric
+       undo
+       vc
 
        :term
        eshell
@@ -32,7 +38,7 @@
        :lang
        emacs-lisp
        (nix +lsp)
-       (scheme +racket)
+       racket
        (latex +lsp)
        (sh +lsp +fish)
        (cc +lsp)
@@ -45,12 +51,21 @@
        ess 
        markdown
        json
+       sh
        yaml
 
        :tools
        (lsp +eglot)
        direnv
+       magit
+       lookup
+       (eval +overlay)
+       editorconfig
 
        :config
        (default +bindings +smartparens))
+
+       ;; :checkers
+       ;; syntax
+       ;; grammar
 
