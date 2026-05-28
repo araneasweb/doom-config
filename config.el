@@ -47,6 +47,8 @@
     (kbd "h") #'dired-up-directory
     (kbd "l") #'dired-find-file))
 
+(map! :n "-" #'dired-jump)
+
 (map!
  :leader
  :desc "Find files"           "f f" #'find-file
