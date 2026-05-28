@@ -35,8 +35,12 @@
             (whitespace-mode 1)))
 
 (after! dired
+
+  (when (file-exists-p "/opt/homebrew/bin/gls")
+    (setq insert-directory-program "/opt/homebrew/bin/gls"))
+
   (setq dired-listing-switches
-        "--all --human-readable --group-directories-first --no-group")
+        "-alh --group-directories-first --no-group")
 
   (evil-define-key 'normal dired-mode-map
     (kbd "-") #'dired-up-directory
